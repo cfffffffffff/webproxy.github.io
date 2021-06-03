@@ -5,41 +5,31 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
   <base target="_blank">
-  <style>
-    body {
-      padding: 0 0.5em;
-    }
-    .box {
-      margin-top: 1em;
-    }
-    #txtURL {
-      width: 100%;
-      height: 2em;
-      text-indent: 0.5em;
-      padding: 0.25em 0;
-    }
-    #btnGo {
-      width: 100%;
-      font-size: 1.5em;
-    }
-    #list a {
-      margin: 1em;
-    }
-  </style>
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"/>
+
 </head>
 <body>
-  <div class="box">
-    <input id="txtURL" type="text" value="www.google.com" autofocus>
+<div class="mdui-appbar">
+  <div class="mdui-toolbar mdui-color-indigo">
+    <a  class="mdui-typo-headline">WEB-Proxy</a>
+    </li>
   </div>
-  <div class="box">
-    <button id="btnGo">Go</button>
+</div>
+<div class="mdui-container">
+  <div class="mdui-textfield mdui-textfield-floating-label">
+    <label class="mdui-textfield-label">需要代理的网址</label>
+    <input id="txtURL" class="mdui-textfield-input" type="text"/>
   </div>
-  <div class="box">
-    <span>切换线路:</span>
-    <select id="selNode"></select>
-  </div>
+</div>
+<div class="mdui-container">
+<body class="mdui-theme-primary-indigo mdui-theme-accent-pink">
+  <button id="btnGo" class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent">转到</button>
+</div>
   <div class="box" id="list">
   </div>
+<script>
+ <script src="http://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"></script>
+</script>
   <script>
     const PAGE_CONF_SET = 110
     const PAGE_CONF_GET = 111
@@ -163,6 +153,6 @@
       }
       updateSelected()
     }
-  </script>
+</script>
 </body>
 </html>
